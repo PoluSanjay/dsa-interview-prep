@@ -1,0 +1,4 @@
+nums=[1,2,1]
+s=set(nums)
+nums[:]=list(s)
+print(nums.sort(),end="_")
