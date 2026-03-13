@@ -1,0 +1,27 @@
+class Solution:
+    def mergeTwoLists(self, list1, list2):
+        
+        arr = []
+        
+        # list1 ni array lo pettaali
+        while list1:
+            arr.append(list1.val)
+            list1 = list1.next
+        
+        # list2 ni array lo pettaali
+        while list2:
+            arr.append(list2.val)
+            list2 = list2.next
+        
+        # sort cheyyali
+        arr.sort()
+        
+        # malli linked list create cheyyali
+        dummy = ListNode(0)
+        temp = dummy
+        
+        for num in arr:
+            temp.next = ListNode(num)
+            temp = temp.next
+        
+        return dummy.next
