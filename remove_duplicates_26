@@ -1,0 +1,10 @@
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+
+        
+        
+        s=set(nums)
+        nums[:]=list(s)
+        nums.sort()
+
+        print(nums,end="_")
